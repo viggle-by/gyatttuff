@@ -5,7 +5,14 @@
 CPU_NAME="Eaglercraft® Core™ i9-13900HX"
 GPU_NAME="Eaglercraft Lunar Lake GT2 (Sigma Balls 67 Graphics)"
 
-OS_NAME=$(uname -s)
+# Read OS info from /etc/os-release
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS_NAME="$NAME $VERSION"
+else
+    OS_NAME=$(uname -s)
+fi
+
 KERNEL=$(uname -r)
 HOSTNAME=$(hostname)
 UPTIME=$(uptime -p)

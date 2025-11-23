@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# eaglerfetch - simple system info display
+
+CPU_NAME="Eaglercraft® Core™ i9-13900HX"
+GPU_NAME="Eaglercraft Lunar Lake GT2 (Sigma Balls 67 Graphics)"
+
+OS_NAME=$(uname -s)
+KERNEL=$(uname -r)
+HOSTNAME=$(hostname)
+UPTIME=$(uptime -p)
+MEMORY=$(free -h | awk '/Mem:/ {print $3 " / " $2}')
+
+echo "=============================="
+echo "        eaglerfetch"
+echo "=============================="
+echo "OS:          $OS_NAME"
+echo "Kernel:      $KERNEL"
+echo "Hostname:    $HOSTNAME"
+echo "Uptime:      $UPTIME"
+echo "CPU:         $CPU_NAME"
+echo "GPU:         $GPU_NAME"
+echo "Memory:      $MEMORY"
+echo "=============================="

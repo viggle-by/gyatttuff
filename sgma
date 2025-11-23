@@ -1,1 +1,6 @@
-[Desktop Entry] Name=Minecraft Exec=(elyprismlauncher --launch 1.21.10)
+[Desktop Entry]
+Name=ElyPrismLauncher
+Comment=ElyPrism Session
+Exec=/usr/bin/launch
+TryExec=/usr/bin/launch
+Type=Application
